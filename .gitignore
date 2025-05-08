@@ -18,11 +18,4 @@ output/
 
 # Ignore build script files
 FileManager.spec
-build_all.py
-build_macos.py
-build_linux.py
-build_windows.py
-build.py
 
-# Ignore build documentation
-build.md
