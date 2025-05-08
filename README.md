@@ -2,6 +2,8 @@
 
 A basic file manager application built with PySide6 (Qt for Python). It provides a graphical interface for browsing, managing, and previewing files on your system.
 
+![Screenshot](screenshot.png)
+
 ## Features
 
 - Browse files and directories using a tree view
