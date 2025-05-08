@@ -104,3 +104,18 @@ class FileManager(QMainWindow):
             self.preview_label.setText("PDF preview not implemented yet.")
         else:
             self.preview_label.setText(f"Preview not available for {file_path}")
+
+
+        self.tree_view.setDragEnabled(True)
+        self.tree_view.setAcceptDrops(True)
+
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+
+    def dropEvent(self, event):
+            file_url = event.mimeData().urls()[0]
+            source_file = file_url.toLocalFile()
+            destination_dir = self.model.filePath(self.tree_view.selectedIndexes()[0])
+            destination_path = QDir(destination_dir).filePath(QFileInfo(source_file).fileName())
+            shutil.move(source_file, destination_path)
