@@ -1,0 +1,3 @@
+6b615691269187efb7cd3b950de6272cc7041e8e821b9d1dc7b4a8a2d96c52a2  FileManager-Setup.exe
+b24bf723ef9fe556d9571192be8887be92e1749b0a0cacfdbc2d75eb3844e748  FileManager.dmg
+f3b85a5baf3895dcdb81ac82c32705f8ba92ecdb3122bafcd0e9e3fe8bbd61ca  filemanager_1.0.0_amd64.deb
