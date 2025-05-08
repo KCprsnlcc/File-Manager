@@ -119,3 +119,9 @@ class FileManager(QMainWindow):
             destination_dir = self.model.filePath(self.tree_view.selectedIndexes()[0])
             destination_path = QDir(destination_dir).filePath(QFileInfo(source_file).fileName())
             shutil.move(source_file, destination_path)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = FileManager()
+    window.show()
+    sys.exit(app.exec())
