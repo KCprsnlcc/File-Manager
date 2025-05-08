@@ -94,3 +94,13 @@ class FileManager(QMainWindow):
         destination = QFileDialog.getExistingDirectory(self, "Select Destination")
         if destination:
             shutil.move(source_path, destination)
+
+    def showPreview(self, file_path):
+        if file_path.lower().endswith(('png', 'jpg', 'jpeg', 'gif')):
+            pixmap = QPixmap(file_path)
+            self.preview_label.setPixmap(pixmap)
+        elif file_path.lower().endswith('pdf'):
+            # For PDF, use QPdfDocument or a third-party library to render a preview
+            self.preview_label.setText("PDF preview not implemented yet.")
+        else:
+            self.preview_label.setText(f"Preview not available for {file_path}")
