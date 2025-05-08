@@ -1,1 +1,28 @@
+# Ignore virtual environment directory
 .venv/
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore output directory for installers
+output/
+
+# Ignore installer files
+*.dmg
+*.zip
+*.deb
+*.rpm
+*.exe
+*.app
+
+# Ignore build script files
+FileManager.spec
+build_all.py
+build_macos.py
+build_linux.py
+build_windows.py
+build.py
+
+# Ignore build documentation
+build.md
